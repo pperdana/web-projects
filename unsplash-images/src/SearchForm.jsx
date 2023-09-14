@@ -1,4 +1,5 @@
-import { useGlobalContext } from './context';
+import { useGlobalContext } from "./context";
+import { FaSearch } from "react-icons/fa";
 
 const SearchForm = () => {
   const { setSearchTerm } = useGlobalContext();
@@ -10,16 +11,17 @@ const SearchForm = () => {
   };
   return (
     <section>
-      <h1 className='title'>unsplash images</h1>
-      <form className='search-form' onSubmit={handleSubmit}>
+      <h1 className="title">unsplash images</h1>
+      <p className="desc">Search beautiful images from Unsplash API</p>
+      <form className="search-form" onSubmit={handleSubmit}>
         <input
-          type='text'
-          className='form-input search-input'
-          name='search'
-          placeholder='cat'
+          type="text"
+          className="form-input search-input"
+          name="search"
+          placeholder="Search Images"
         />
-        <button type='submit' className='btn'>
-          search
+        <button type="submit" className="btn">
+          <FaSearch className="fa-search" />
         </button>
       </form>
     </section>

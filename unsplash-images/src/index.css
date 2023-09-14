@@ -19,6 +19,7 @@ body {
 h4 {
   font-size: 25px;
 }
+
 .title {
   margin-top: 3.2rem;
   text-transform: capitalize;
@@ -103,4 +104,76 @@ a {
 
 a:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* ============= MEDIA QUERIES =============== */
+
+@media (max-width: 80em) {
+  .image-container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 65em) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 54em) {
+  .image-container {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 65%;
+  } /*10px*/
+
+  .image-container {
+    grid-template-columns: repeat(1, 1fr);
+
+    max-width: 400px;
+  }
+  .search-form {
+    .form-input {
+      font-size: 14px;
+    }
+
+    .btn {
+      top: 14px;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  html {
+    font-size: 50%;
+  } /*8px*/
+
+  .desc {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .image-container {
+    max-width: 300px;
+  }
+
+  .search-form {
+    .form-input {
+      font-size: 11px;
+    }
+
+    .btn {
+      top: 11px;
+
+      .fa-search {
+        font-size: 12px;
+      }
+    }
+  }
 }

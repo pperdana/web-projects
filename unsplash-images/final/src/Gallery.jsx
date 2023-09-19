@@ -43,10 +43,9 @@ const Gallery = () => {
       {results.map((item) => {
         const url = item?.urls?.regular;
         return (
-          <a href={item.links.html} target="blank">
+          <a href={item.links.html} target="blank" key={item.id}>
             <img
               src={url}
-              key={item.id}
               alt={item.alt_description}
               title={item.alt_description}
               className="img"

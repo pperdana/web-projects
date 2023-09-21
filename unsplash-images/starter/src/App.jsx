@@ -1,12 +1,4 @@
-import Gallery from "./Gallery";
-import SearchForm from "./SearchForm";
-
 const App = () => {
-  return (
-    <main>
-      <SearchForm />
-      <Gallery />
-    </main>
-  );
+  return <h1>Unsplash Images Starter</h1>;
 };
 export default App;

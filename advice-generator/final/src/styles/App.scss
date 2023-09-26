@@ -1,0 +1,66 @@
+@import "./settings/_settings";
+
+main {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice-container {
+  background-color: $color-neutral--dark-grayish-blue;
+  width: 55rem;
+  text-align: center;
+  padding: 4.8rem 3.2rem;
+  border-radius: 12px;
+
+  position: relative;
+
+  .advice-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: $color-primary--neon-green;
+    letter-spacing: 4px;
+    margin-bottom: 2.4rem;
+  }
+
+  .advice-text {
+    font-weight: $font-weights--manrope-800;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+  }
+
+  .divider {
+    margin-bottom: 1.4rem;
+    text-align: center;
+    .divider-icon {
+      background-image: url(../images/pattern-divider-desktop.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      height: 2rem;
+    }
+  }
+
+  .advice-btn {
+    background-color: $color-primary--neon-green;
+
+    padding: 1.5rem;
+    border-radius: 50%;
+    display: inline-block;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .advice-btn:hover {
+    box-shadow: 0rem 0rem 3rem 0rem hsl(150, 95%, 66%);
+  }
+}

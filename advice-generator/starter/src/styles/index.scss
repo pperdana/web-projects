@@ -1,0 +1,20 @@
+@import "./settings/_settings";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-family--manrope;
+  background-color: $color-neutral--dark-blue;
+  line-height: 1;
+  font-weight: 400;
+  color: $color-primary--light-Cyan;
+  font-size: $font-size--quote-main;
+}

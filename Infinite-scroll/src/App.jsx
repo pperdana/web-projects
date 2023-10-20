@@ -1,84 +1,100 @@
-import { useState, useEffect } from "react";
-import "./App.css";
+import React, { useState, useEffect, useRef } from "react";
 
-function App() {
+function InfiniteScroll() {
   const [photosArray, setPhotosArray] = useState([]);
   const [imagesLoaded, setImagesLoaded] = useState(0);
   const [totalImages, setTotalImages] = useState(0);
   const [ready, setReady] = useState(false);
-
-  const count = 10;
-  const apiKey = "Qm5r7U4Lck1w1Y1SW2AK6nNKmxsXjwrAphEixhu48is";
+  const imageContainerRef = useRef(null);
+  const loaderRef = useRef(null);
+  const count = 30;
+  const apiKey = "EkuXiMb4NzKMP_c-NLHCi2EMJFHF4LKO8PjgkfshwTM"; // Replace with your API key
   const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}`;
 
-  // Check if all images were loaded
-  function imageLoaded() {
-    setImagesLoaded((prevImagesLoaded) => prevImagesLoaded + 1);
-  }
-
-  // Helper Function to Set Attributes on JSX Elements
-  function createImageJSX(photo) {
-    return (
-      <a key={photo.id} href={photo.links.html} target="blank">
-        <img
-          src={photo.urls.regular}
-          alt={photo.alt_description}
-          title={photo.alt_description}
-          onLoad={imageLoaded}
-          className="img"
-        />
-      </a>
-    );
-  }
-
-  // Get photos from Unsplash API
-  async function getPhotos() {
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      setPhotosArray((prevPhotosArray) => [...prevPhotosArray, ...data]);
-    } catch (error) {
-      // Catch Error Here
-    }
-  }
-
-  // Check to see if scrolling near the bottom of the page, Load More Photos
-  function handleScroll() {
-    if (
-      window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 1000 &&
-      ready
-    ) {
-      setReady(false);
-      getPhotos();
-    }
-  }
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    // On Load
     getPhotos();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [ready]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (imagesLoaded === totalImages) {
       setReady(true);
+      loaderRef.current.hidden = true;
     }
   }, [imagesLoaded, totalImages]);
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 1000
+    ) {
+      if (ready) {
+        setReady(false);
+        getPhotos();
+      }
+    }
+  };
+
+  const imageLoaded = () => {
+    setImagesLoaded((prevCount) => prevCount + 1);
+  };
+
+  const setAttributes = (element, attributes) => {
+    for (const key in attributes) {
+      element.setAttribute(key, attributes[key]);
+    }
+  };
+
+  const displayPhotos = () => {
+    setImagesLoaded(0);
+    setTotalImages(photosArray.length);
+
+    photosArray.forEach((photo) => {
+      const item = document.createElement("a");
+      setAttributes(item, {
+        href: photo.links.html,
+        target: "_blank",
+      });
+
+      const img = document.createElement("img");
+      setAttributes(img, {
+        src: photo.urls.regular,
+        alt: photo.alt_description,
+        title: photo.alt_description,
+      });
+
+      img.addEventListener("load", imageLoaded);
+      item.appendChild(img);
+      imageContainerRef.current.appendChild(item);
+    });
+  };
+
+  const getPhotos = async () => {
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      setPhotosArray([...photosArray, ...data]);
+      displayPhotos();
+    } catch (error) {
+      console.error("Error fetching photos:", error);
+    }
+  };
+
   return (
     <div>
-      <div id="loader">{!ready ? "Loading..." : null}</div>
-      <div className="gallery">
-        {photosArray.map((photo) => createImageJSX(photo))}
+      <div id="image-container" ref={imageContainerRef}></div>
+      <div id="loader" ref={loaderRef}>
+        Loading...
       </div>
     </div>
   );
 }
 
-export default App;
+export default InfiniteScroll;

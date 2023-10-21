@@ -10,6 +10,10 @@ export default {
         xl: "0rem 0rem 3rem 0rem hsl(150, 95%, 66%)",
       },
     },
+    screens: {
+      md: { max: "35em" },
+      sm: { max: "25.5em" },
+    },
   },
   plugins: [],
 };

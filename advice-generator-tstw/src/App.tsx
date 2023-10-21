@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./styles/App.scss";
+import { useGlobalContext } from "./context";
+import diceIcon from "./images/icon-dice.svg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { fetchAdvice, advice, adviceId } = useGlobalContext();
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <section className="advice-container">
+        <h1 className="advice-title">advice #{adviceId}</h1>
+
+        <p className="advice-text">&quot;{advice}&quot;</p>
+        <div className="divider">
+          <div className="divider-icon" />
+        </div>
+        <div className="advice-btn">
+          <img
+            src={diceIcon}
+            alt="dice icon"
+            className="dice-icon"
+            onClick={fetchAdvice}
+          />
+        </div>
+      </section>
+    </main>
+  );
 }
 
-export default App
+export default App;

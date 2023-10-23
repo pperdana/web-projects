@@ -1,9 +1,6 @@
 # Birhtday List App
 
 ## Table of contents
-
-- [Birhtday List App](#birhtday-list-app)
-  - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)

@@ -1,17 +1,30 @@
 import axios from "axios";
-import React, { useState, useContext, useEffect } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
+
+interface AdviceData {
+  slip: {
+    id: number;
+    advice: string;
+  };
+}
+
+interface AppContextType {
+  fetchAdvice: () => Promise<void>;
+  advice: string;
+  adviceId: number | undefined;
+}
 
 const url = "https://api.adviceslip.com/advice";
 
-const AppContext = React.createContext();
+const AppContext = createContext<AppContextType | undefined>(undefined);
 
-const AppProvider = ({ children }) => {
-  const [advice, setAdvice] = useState("random dad joke");
-  const [adviceId, setAdviceId] = useState();
+const AppProvider: React.FC = ({ children }) => {
+  const [advice, setAdvice] = useState<string>("random dad joke");
+  const [adviceId, setAdviceId] = useState<number | undefined>(undefined);
 
   const fetchAdvice = async () => {
     try {
-      const { data } = await axios(url);
+      const { data } = await axios.get<AdviceData>(url);
       setAdvice(data.slip.advice);
       setAdviceId(data.slip.id);
     } catch (error) {
@@ -36,8 +49,12 @@ const AppProvider = ({ children }) => {
   );
 };
 
-export const useGlobalContext = () => {
-  return useContext(AppContext);
+export const useGlobalContext = (): AppContextType => {
+  const context = useContext(AppContext);
+  if (!context) {
+    throw new Error("useGlobalContext must be used within an AppProvider");
+  }
+  return context;
 };
 
-export { AppContext, AppProvider };
+export { AppProvider };

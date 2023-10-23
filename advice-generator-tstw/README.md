@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Advice generator app | Frontend Mentor](https://www.frontendmentor.io/solutions/advice-generator-app-DLUCFD5hg_)
-- Live Site URL: [https://advice-generator-app-pperdana.netlify.app](https://advice-generator-tstw.netlify.app/)
+- Live Site URL: [https://advice-generator-tstw.netlify.app](https://advice-generator-tstw.netlify.app/)
 
 ## My process
 

@@ -1,8 +1,9 @@
 # Birhtday List App
 
-
 ## Table of contents
 
+- [Birhtday List App](#birhtday-list-app)
+  - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
@@ -28,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site : [https://advice-generator-app-pperdana.netlify.app](https://advice-generator-tstw.netlify.app/)
+- Live Site : [https://birthday-list-tstw.netlify.app/](https://birthday-list-tstw.netlify.app/)
 
 ## My process
 
@@ -42,7 +43,6 @@ Users should be able to:
 - CSS custom properties
 - Mobile-first workflow
 - Flexbox
-
 
 ### Useful resources
 

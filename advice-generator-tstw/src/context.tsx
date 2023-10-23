@@ -1,5 +1,11 @@
-import axios from "axios";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import axios, { AxiosError } from "axios";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  createContext,
+  ReactNode,
+} from "react";
 
 interface AdviceData {
   slip: {
@@ -11,24 +17,36 @@ interface AdviceData {
 interface AppContextType {
   fetchAdvice: () => Promise<void>;
   advice: string;
-  adviceId: number | undefined;
+  adviceId?: number;
+  error: AxiosError | null; // Define AxiosError for the error property
 }
 
 const url = "https://api.adviceslip.com/advice";
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
-const AppProvider: React.FC = ({ children }) => {
+interface AppProviderProps {
+  children: ReactNode;
+}
+
+const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [advice, setAdvice] = useState<string>("random dad joke");
   const [adviceId, setAdviceId] = useState<number | undefined>(undefined);
+  const [error, setError] = useState<AxiosError | null>(null); // Initialize with AxiosError
 
   const fetchAdvice = async () => {
     try {
       const { data } = await axios.get<AdviceData>(url);
       setAdvice(data.slip.advice);
       setAdviceId(data.slip.id);
+      setError(null); // Clear any previous errors on success
     } catch (error) {
-      console.log(error.response);
+      if (axios.isAxiosError(error)) {
+        setError(error);
+        console.error(error.response);
+      } else {
+        console.error(error);
+      }
     }
   };
 
@@ -42,6 +60,7 @@ const AppProvider: React.FC = ({ children }) => {
         fetchAdvice,
         advice,
         adviceId,
+        error,
       }}
     >
       {children}
@@ -49,9 +68,9 @@ const AppProvider: React.FC = ({ children }) => {
   );
 };
 
-export const useGlobalContext = (): AppContextType => {
+export const useGlobalContext = () => {
   const context = useContext(AppContext);
-  if (!context) {
+  if (context === undefined) {
     throw new Error("useGlobalContext must be used within an AppProvider");
   }
   return context;

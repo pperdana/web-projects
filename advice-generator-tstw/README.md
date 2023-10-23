@@ -1,27 +1,61 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Advice generator app solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The challenge
 
-- Configure the top-level `parserOptions` property like this:
+Users should be able to:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Generate a new piece of advice by clicking the dice icon
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Screenshot
+
+![](./src/images/design/desktop-preview.jpg)
+
+### Links
+
+- Solution URL: [Advice generator app | Frontend Mentor](https://www.frontendmentor.io/solutions/advice-generator-app-DLUCFD5hg_)
+- Live Site URL: [https://advice-generator-app-pperdana.netlify.app](https://advice-generator-tstw.netlify.app/)
+
+## My process
+
+### Built with
+
+- Vite
+- React
+- Tailwind
+- TypeScript
+- Fetch API
+- Axios
+- Semantic HTML5 markup
+- CSS custom properties
+- Mobile-first workflow
+- Flexbox
+
+
+### Useful resources
+
+- [React | JS library](https://reactjs.org/)
+- [Vite](https://vitejs.dev/guide/)
+- [Tailwind CSS | For styles](https://tailwindcss.com/)
+- [A Complete Guide to Flexbox | CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
+
+## Author
+
+- Frontend Mentor - [@Panji200](https://www.frontendmentor.io/profile/Panji200)
+- Website - [pperdana.netlify.app](https://pperdana.netlify.app)

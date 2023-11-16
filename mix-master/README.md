@@ -6,14 +6,14 @@
 
 ## Table of contents
 
-- [Mix master](#mix-master)
-  - [Links](#links)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-  - [Tech stack](#tech-stack)
-  - [Author](#author)
+
+- [Links](#links)
+- [Table of contents](#table-of-contents)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [Tech stack](#tech-stack)
+- [Author](#author)
 
 ## Overview
 

@@ -2,18 +2,18 @@
 
 ### Links
 
-- Live Site URL:
+- Live Site URL:[https://mixmaster-pperdana.netlify.app](https://mixmaster-pperdana.netlify.app/)
 
 ## Table of contents
 
-
-- [Links](#links)
-- [Table of contents](#table-of-contents)
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-- [Tech stack](#tech-stack)
-- [Author](#author)
+- [Mix master](#mix-master)
+  - [Links](#links)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+  - [Tech stack](#tech-stack)
+  - [Author](#author)
 
 ## Overview
 
@@ -25,7 +25,7 @@
 
 ### Screenshot
 
-![](./public/keeper.png)
+![](./public/mixmaster.png)
 
 ## Tech stack
 

@@ -5,7 +5,7 @@ import CreateArea from "./components/CreateArea";
 import Footer from "./components/Footer";
 
 interface Note {
-  id: number;
+  title: string;
   content: string;
 }
 

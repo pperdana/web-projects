@@ -1,27 +1,46 @@
-# React + TypeScript + Vite
+# Keeper App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Keeper App is clone of google keep. This app is a web-based application that provides users with a simple and intuitive platform to capture and organize their thoughts and ideas, and store important information. The app is designed to be user-friendly, and it offers a variety of features that help users to stay organized and productive.
 
-Currently, two official plugins are available:
+### Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Live Site URL: [https://keeper-pperdana.netlify.app](https://keeper-pperdana.netlify.app)
 
-## Expanding the ESLint configuration
+## Table of contents
+ 
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+ 
+  - [Tech stack](#tech-stack)
+ 
+  - [Author](#author)
+  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The challenge
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- View the optimal layout for the interface depending on their device's screen size
+- Create and edit notes
+- Archive or delete notes to keep workspace clean and organized
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Screenshot
+![](./public/keeper.png)
+
+
+## Tech stack
+- React
+- Tailwind
+- TypeScript
+- React Hook
+- Semantic HTML5 markup
+- CSS custom properties
+- Mobile-first workflow
+- Flexbox
+
+
+## Author
+
+- Website - [pperdana.netlify.app](https://pperdana.netlify.app)
+- Frontend Mentor - [@Panji200](https://www.frontendmentor.io/profile/Panji200)

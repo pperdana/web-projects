@@ -1,40 +1,41 @@
 # Unsplash Images
+Unsplash Images application, an app where users can search images through keywords. This application use images from Unsplash API that the largest open collection of high-quality photos.
 
 ### Links
 
-- Live Site URL:[]()
+- Live Site URL: [https://unsplash-images-pperdana.netlify.app](https://unsplash-images-pperdana.netlify.app/)
 
 ## Table of contents
 
-- [Unsplash Images](#unsplash-images)
-  - [Links](#links)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-  - [Tech stack](#tech-stack)
-  - [Author](#author)
+- [Table of contents](#table-of-contents)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [Tech stack](#tech-stack)
+- [Author](#author)
 
 ## Overview
 
 ### The challenge
-
+User able to :
+- Search images from Unsplash API
+- Display images from search keywords
 - View the optimal layout for the interface depending on their device's screen size
-- Create and edit notes
-- Archive or delete notes to keep workspace clean and organized
 
 ### Screenshot
 
-![](./public/mixmaster.png)
+![](./public/unsplash-images.gif)
 
 ## Tech stack
 
 - React
-- Styled Components
+- Tailwind
 - TypeScript
+- React Query
+- React Context
 - Axios
-- React Router
-- React Toastify
+- Unsplash API
+- React Icon
 - Mobile-first workflow
 - Flexbox
 

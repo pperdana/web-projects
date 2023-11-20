@@ -24,7 +24,7 @@ User able to :
 
 ### Screenshot
 
-![](./public/unsplash-images.gif)
+![](./public/UnsplashImages.gif)
 
 ## Tech stack
 

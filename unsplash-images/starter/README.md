@@ -7,7 +7,6 @@ Unsplash Images application, an app where users can search images through keywor
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)

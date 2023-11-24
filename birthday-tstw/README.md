@@ -1,14 +1,14 @@
 # Birhtday List App
-
+Introducing "Birhtday List" app, Basically it's an application that show a list of people. It's  display the image, display the name, as well as the age, and this application also be able to clear the list.
 ## Table of contents
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
 ## Overview
 

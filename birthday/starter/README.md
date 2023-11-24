@@ -43,7 +43,6 @@ Users should be able to:
 
 - [React | JS library](https://reactjs.org/)
 - [Vite](https://vitejs.dev/guide/)
-- [Tailwind CSS | For styles](https://tailwindcss.com/)
 - [A Complete Guide to Flexbox | CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
 
 ## Author

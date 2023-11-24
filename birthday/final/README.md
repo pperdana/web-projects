@@ -26,18 +26,16 @@ Users should be able to:
 
 ### Links
 
-- Live Site : [https://birthday-list-tstw.netlify.app/](https://birthday-list-tstw.netlify.app/)
+- Live Site : [https://birthday-list-pperdana.netlify.app](https://birthday-list-pperdana.netlify.app)
 
 ## My process
 
 ### Built with
 
-- Vite
 - React
-- Tailwind
-- TypeScript
-- Semantic HTML5 markup
 - CSS custom properties
+- Vite
+- Semantic HTML5 markup
 - Mobile-first workflow
 - Flexbox
 
@@ -45,7 +43,6 @@ Users should be able to:
 
 - [React | JS library](https://reactjs.org/)
 - [Vite](https://vitejs.dev/guide/)
-- [Tailwind CSS | For styles](https://tailwindcss.com/)
 - [A Complete Guide to Flexbox | CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
 
 ## Author

@@ -26,18 +26,16 @@ Users should be able to:
 
 ### Links
 
-- Live Site : [https://birthday-list-tstw.netlify.app/](https://birthday-list-tstw.netlify.app/)
+- Live Site : [https://birthday-list-pperdana.netlify.app](https://birthday-list-pperdana.netlify.app)
 
 ## My process
 
 ### Built with
 
-- Vite
 - React
-- Tailwind
-- TypeScript
-- Semantic HTML5 markup
 - CSS custom properties
+- Vite
+- Semantic HTML5 markup
 - Mobile-first workflow
 - Flexbox
 

@@ -8,7 +8,7 @@ interface NoteListProps {
 
 const NoteList: React.FC<NoteListProps> = ({ notes, deleteNote }) => {
   return (
-    <div className="flex flex-wrap max-w-[820px] mx-auto lg:max-w-[576px] lg:justify-between md:justify-center mb-[80px]">
+    <div className="flex flex-wrap mx-auto max-w-[1088px]  xl:w-[816px] lg:max-w-[546px] lg:justify-between md:justify-center mb-[80px]">
       {notes.map((noteItem, index) => (
         <Note
           key={index}

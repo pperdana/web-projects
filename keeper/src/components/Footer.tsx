@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="absolute text-center bottom-0 w-[calc(100%-16px)] h-[2.5rem]">
+    <footer className="fixed text-center bottom-0 w-[calc(100%-16px)] h-[2.5rem]">
       <p className="text-[#ccc]">Copyright ⓒ {year}</p>
     </footer>
   );

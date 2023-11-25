@@ -8,6 +8,7 @@ export default {
     },
     extend: {},
     screens: {
+      xl: { max: "70em" },
       lg: { max: "53em" },
       md: { max: "34.3em" },
     },

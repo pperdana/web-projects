@@ -32,12 +32,16 @@ const CreateArea: React.FC<CreateAreaProps> = ({ onAdd }) => {
   };
 
   const submitNote = (event: React.FormEvent) => {
-    onAdd(note);
-    setNote({
-      title: "",
-      content: "",
-    });
-    event.preventDefault();
+    if (!note.title && !note.content) {
+      return;
+    } else {
+      onAdd(note);
+      setNote({
+        title: "",
+        content: "",
+      });
+      event.preventDefault();
+    }
   };
 
   const expand = () => {
